@@ -28,13 +28,21 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "embed",
+      "accordion-container"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "accordion-container",
+    "components": [
+      "accordion-item"
     ]
   }
 ]
