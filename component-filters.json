@@ -30,7 +30,9 @@
       "columns",
       "fragment",
       "embed",
-      "accordion-container"
+      "accordion-container",
+      "quote",
+      "tab-container"
     ]
   },
   {
@@ -43,6 +45,12 @@
     "id": "accordion-container",
     "components": [
       "accordion-item"
+    ]
+  },
+  {
+    "id": "tab-container",
+    "components": [
+      "tab-item"
     ]
   }
 ]

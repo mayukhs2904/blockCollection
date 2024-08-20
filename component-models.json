@@ -235,6 +235,48 @@
         "description": "Add Description to the Accordion"
       }
     ]
+  },
+  {
+    "id": "quote",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "quoteQuatation",
+        "value": "",
+        "label": "Quatation",
+        "description": "Add the Quatation"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "quoteAttribution",
+        "value": "",
+        "label": "Attribution",
+        "description": "Add the attribution"
+      }
+    ]
+  },
+  {
+    "id": "tab-item",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tabLabel",
+        "value": "",
+        "label": "Title",
+        "description": "Add title to the tab"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "tabDescription",
+        "value": "",
+        "label": "Description",
+        "description": "Add Description to the tab"
+      }
+    ]
   }
-
+  
 ]
