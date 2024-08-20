@@ -245,14 +245,14 @@
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Tab Item",
                     "model": "tab-item",
-                    "tabLabel": "Tab",
+                    "tabLabel": "Tab One",
                     "tabDescription": "Tab description"
                   },
                   "item2": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Tab Item",
                     "model": "tab-item",
-                    "tabLabel": "Tab",
+                    "tabLabel": "Tab Two",
                     "tabDescription": "Tab description"
                   }
                 }
