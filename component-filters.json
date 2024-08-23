@@ -32,7 +32,8 @@
       "embed",
       "accordion-container",
       "quote",
-      "tab-container"
+      "tab-container",
+      "carousel-container"
     ]
   },
   {
@@ -52,5 +53,9 @@
     "components": [
       "tab-item"
     ]
+  },
+  {
+    "id": "carousel-container",
+    "components": ["carousel-slide"]
   }
 ]
