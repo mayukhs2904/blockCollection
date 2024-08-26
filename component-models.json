@@ -317,5 +317,10 @@
         "label": "Provide Video Link"
       }
     ]
+  },
+  {
+    "id": "table",
+    "fields": [
+    ]
   }
 ]
