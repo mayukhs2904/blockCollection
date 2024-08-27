@@ -5,7 +5,6 @@ export default async function decorate(block) {
   const tablist = document.createElement('div');
   tablist.className = 'tabs-list';
   tablist.setAttribute('role', 'tablist');
-
   // decorate tabs and tabpanels
   const tabs = [...block.children].map((child) => child.firstElementChild);
   tabs.forEach((tab, i) => {
@@ -18,6 +17,7 @@ export default async function decorate(block) {
     tabpanel.setAttribute('aria-hidden', !!i);
     tabpanel.setAttribute('aria-labelledby', `tab-${id}`);
     tabpanel.setAttribute('role', 'tabpanel');
+    
 
     // build tab button
     const button = document.createElement('button');
@@ -41,6 +41,5 @@ export default async function decorate(block) {
     tablist.append(button);
     tab.remove();
   });
-  block.innerHTML='';
   block.prepend(tablist);
 }
