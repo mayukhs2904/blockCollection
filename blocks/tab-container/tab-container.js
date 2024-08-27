@@ -1,23 +1,26 @@
+// eslint-disable-next-line import/no-unresolved
 import { toClassName } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
   // build tablist
   const tablist = document.createElement('div');
+  const tabContent = document.createElement('div');
   tablist.className = 'tabs-list';
   tablist.setAttribute('role', 'tablist');
+
   // decorate tabs and tabpanels
   const tabs = [...block.children].map((child) => child.firstElementChild);
   tabs.forEach((tab, i) => {
     const id = toClassName(tab.textContent);
 
     // decorate tabpanel
-    const tabpanel = block.children[i];
+    const tabpanel = block.children[i].firstElementChild.nextElementSibling;
+    console.log(tabpanel);
     tabpanel.className = 'tabs-panel';
     tabpanel.id = `tabpanel-${id}`;
     tabpanel.setAttribute('aria-hidden', !!i);
     tabpanel.setAttribute('aria-labelledby', `tab-${id}`);
     tabpanel.setAttribute('role', 'tabpanel');
-    
 
     // build tab button
     const button = document.createElement('button');
@@ -38,8 +41,11 @@ export default async function decorate(block) {
       tabpanel.setAttribute('aria-hidden', false);
       button.setAttribute('aria-selected', true);
     });
+    tabContent.append(tabpanel);
     tablist.append(button);
-    tab.remove();
+    
   });
+  block.innerHTML='';
+  block.append(tabContent);
   block.prepend(tablist);
 }
