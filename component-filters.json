@@ -33,7 +33,9 @@
       "accordion-container",
       "quote",
       "tab-container",
-      "carousel-container"
+      "carousel-container",
+      "video",
+      "table"
     ]
   },
   {
