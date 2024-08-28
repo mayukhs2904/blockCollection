@@ -315,6 +315,12 @@
         "name": "link",
         "value": "",
         "label": "Provide Video Link"
+      },
+      {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "autoplay",
+        "label": "Do you want autoplay video?"
       }
     ]
   },
