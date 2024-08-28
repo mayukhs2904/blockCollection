@@ -111,8 +111,8 @@ export default async function decorate(block) {
   const link = block.querySelector('a').href;
   block.textContent = '';
   block.dataset.embedLoaded = false;
-
-  const autoplay = block.classList.contains('autoplay');
+  const autoplay = block.querySelector('div').firstElementChild.textContent;
+  // const autoplay = block.classList.contains('autoplay');
   if (placeholder) {
     block.classList.add('placeholder');
     const wrapper = document.createElement('div');
