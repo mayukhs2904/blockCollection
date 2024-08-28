@@ -1,6 +1,6 @@
 export default function decorate(block) {
-    [...block.children].forEach((row) => {
-      // decorate accordion item label
+  [...block.children].forEach((row) => {
+  // decorate accordion item label
       const label = row.children[0];
       const summary = document.createElement('summary');
       summary.className = 'accordion-item-label';
@@ -16,3 +16,4 @@ export default function decorate(block) {
       row.append(details);
     });
   }
+
