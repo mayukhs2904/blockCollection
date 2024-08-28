@@ -111,6 +111,7 @@ export default async function decorate(block) {
   if (autoplaytoggle && autoplaytoggle.firstElementChild.textContent === 'true') {
     block.classList.add('autoplay');
   }
+  autoplaytoggle?.remove();
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href;
   block.textContent = '';
