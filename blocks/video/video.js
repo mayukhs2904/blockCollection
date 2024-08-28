@@ -110,11 +110,9 @@ export default async function decorate(block) {
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href;
   const autoplaytoggle = block.querySelector('div');
-  console.log(autoplaytoggle,"autoplaytoggle")
   if (autoplaytoggle && autoplaytoggle.firstElementChild.textContent === 'true') {
     block.classList.add('autoplay');
   }
-  autoplaytoggle?.remove();
   block.textContent = '';
   block.dataset.embedLoaded = false;
   const autoplay = block.classList.contains('autoplay');
