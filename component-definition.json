@@ -347,10 +347,7 @@
               "page": {
                 "resourceType": "core/franklin/components/columns/v1/columns",
                 "template": {
-                  "name": "Table",
-                  "model": "table",
-                  "columns": "2",
-                  "rows": "1"
+                  "name": "Table"
                 }
               }
             }
