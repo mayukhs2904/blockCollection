@@ -10,6 +10,10 @@
     "components": []
   },
   {
+    "id": "table",
+    "components": []
+  },
+  {
     "id": "column",
     "components": [
       "text",
