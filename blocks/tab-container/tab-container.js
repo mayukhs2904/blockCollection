@@ -3,6 +3,7 @@ import { toClassName } from '../../scripts/aem.js';
 export default async function decorate(block) {
   // build tablist
   const tablist = document.createElement('div');
+  const tabContent = document.createElement('div');
   tablist.className = 'tabs-list';
   tablist.setAttribute('role', 'tablist');
 
@@ -12,7 +13,7 @@ export default async function decorate(block) {
     const id = toClassName(tab.textContent);
 
     // decorate tabpanel
-    const tabpanel = block.children[i];
+    const tabpanel = block.children[i].firstElementChild.nextElementSibling;
     tabpanel.className = 'tabs-panel';
     tabpanel.id = `tabpanel-${id}`;
     tabpanel.setAttribute('aria-hidden', !!i);
@@ -38,9 +39,11 @@ export default async function decorate(block) {
       tabpanel.setAttribute('aria-hidden', false);
       button.setAttribute('aria-selected', true);
     });
+    tabContent.append(tabpanel);
     tablist.append(button);
-    tab.remove();
+    
   });
   block.innerHTML='';
+  block.append(tabContent);
   block.prepend(tablist);
 }
