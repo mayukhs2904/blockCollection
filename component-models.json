@@ -303,6 +303,12 @@
     "id": "video",
     "fields": [
       {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "autoplay",
+        "label": "Do you want autoplay video?"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "fileReference",
@@ -315,12 +321,6 @@
         "name": "link",
         "value": "",
         "label": "Provide Video Link"
-      },
-      {
-        "component": "boolean",
-        "valueType": "boolean",
-        "name": "autoplay",
-        "label": "Do you want autoplay video?"
       }
     ]
   },
