@@ -1,11 +1,11 @@
-.tab-container .tabs-list {
+.tabs-container .tabs-list {
   display: flex;
   gap: 8px;
   max-width: 100%;
   overflow-x: auto;
 }
 
-.tab-container .tabs-list button {
+.tabs-container .tabs-list button {
   flex: 0 0 max-content;
   margin: 0;
   border: 1px solid var(--dark-color);
@@ -23,24 +23,24 @@
   transition: background-color 0.2s;
 }
 
-.tab-container .tabs-list button[aria-selected="true"] {
+.tabs-container .tabs-list button[aria-selected="true"] {
   border-bottom: 1px solid var(--background-color);
   background-color: var(--background-color);
   cursor: initial;
 }
 
-.tab-container .tabs-list button[aria-selected="false"]:hover,
-.tabs .tabs-list button[aria-selected="false"]:focus {
+.tabs-container .tabs-list button[aria-selected="false"]:hover,
+.tabs-container .tabs-list button[aria-selected="false"]:focus {
   background-color: var(--dark-color);
 }
 
-.tab-container .tabs-panel {
+.tabs-container .tabs-panel {
   margin-top: -1px;
   padding: 0 16px;
   border: 1px solid var(--dark-color);
   overflow: auto;
 }
 
-.tab-container .tabs-panel[aria-hidden="true"] {
+.tabs-container .tabs-panel[aria-hidden="true"] {
   display: none;
 }

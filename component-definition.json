@@ -278,28 +278,28 @@
           }
         },
         {
-          "title": "Tab Container",
-          "id": "tab-container",
+          "title": "Tabs Container",
+          "id": "tabs-container",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "filter": "tab-container",
-                  "name": "Tab Container",
-                  "model": "tab-container",
+                  "filter": "tabs-container",
+                  "name": "Tabs Container",
+                  "model": "tabs-container",
                   "item1": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Tab Item",
                     "model": "tab-item",
-                    "tabLabel": "Tab One",
+                    "tabTitle": "Tab One",
                     "tabDescription": "Tab description"
                   },
                   "item2": {
                     "sling:resourceType": "core/franklin/components/block/v1/block/item",
                     "name": "Tab Item",
                     "model": "tab-item",
-                    "tabLabel": "Tab Two",
+                    "tabTitle": "Tab Two",
                     "tabDescription": "Tab description"
                   }
                 }
@@ -317,7 +317,7 @@
                 "template": {
                   "name": "Tab Item",
                   "model": "tab-item",
-                  "tabLabel": "Tab",
+                  "tabTitle": "Tab",
                   "tabDescription": "Tab description"
                 }
               }

@@ -263,10 +263,10 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "tabLabel",
+        "name": "tabTitle",
         "value": "",
         "label": "Title",
-        "description": "Add title to the tab"
+        "description": "Set the title for the tab."
       },
       {
         "component": "richtext",
@@ -274,7 +274,7 @@
         "name": "tabDescription",
         "value": "",
         "label": "Description",
-        "description": "Add Description to the tab"
+        "description": "Set the content for the tab."
       }
     ]
   },
