@@ -303,6 +303,12 @@
     "id": "video",
     "fields": [
       {
+        "component": "boolean",
+        "valueType": "boolean",
+        "name": "autoplay",
+        "label": "Do you want autoplay video?"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "fileReference",
@@ -321,6 +327,62 @@
   {
     "id": "table",
     "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Border",
+            "children": [
+              {
+                "name": "Striped",
+                "value": "striped"
+              },
+              {
+                "name": "Bordered",
+                "value": "bordered"
+              }
+            ]
+          },
+          {
+            "name": "Header",
+            "children": [
+              {
+                "name": "No Header",
+                "value": "no-header"
+              }
+            ]
+          },
+          {
+            "name": "Columns",
+            "children": [
+              {
+                "name": "1 Column",
+                "value": "columns-1"
+              },
+              {
+                "name": "2 Columns",
+                "value": "columns-2"
+              },
+              {
+                "name": "3 Columns",
+                "value": "columns-3"
+              },
+              {
+                "name": "4 Columns",
+                "value": "columns-4"
+              },
+              {
+                "name": "5 Columns",
+                "value": "columns-5"
+              }
+            ]
+          }
+        ]
+      }
     ]
   }
 ]

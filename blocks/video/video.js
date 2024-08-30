@@ -106,12 +106,16 @@ const loadVideoEmbed = (block, link, autoplay, background) => {
   }
 };
 
-export default async function decorate(block) {
+export default async function decorate(block) { 
+  const autoplaytoggle = block.querySelector('div');
+  if (autoplaytoggle && autoplaytoggle.firstElementChild.textContent === 'true') {
+    block.classList.add('autoplay');
+  }
+  autoplaytoggle?.remove();
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href;
   block.textContent = '';
   block.dataset.embedLoaded = false;
-
   const autoplay = block.classList.contains('autoplay');
   if (placeholder) {
     block.classList.add('placeholder');

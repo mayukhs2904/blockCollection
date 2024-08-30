@@ -12,7 +12,7 @@ main .hero-container {
   min-height: 300px;
 }
 
-.hero h1 {
+.hero :where(h1, h2, h3, h4, h5, h6, p, pre) {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;

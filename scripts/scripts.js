@@ -64,9 +64,9 @@ async function loadFonts() {
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
-function buildAutoBlocks() {
+function buildAutoBlocks(main) {
   try {
-    // TODO: add auto block, if needed
+    buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
@@ -149,6 +149,24 @@ export function createTag(tag, attributes, html) {
     });
   }
   return el;
+}
+
+function buildHeroBlock(main) {
+  const picture = main.querySelector('picture');
+  const headingLevels = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'pre'];
+  let heading = null;
+
+  for (let level of headingLevels) {
+    heading = main.querySelector(level);
+    if (heading) break; // Exit the loop if a heading is found
+  }
+
+  // Proceed only if both picture and a heading are found, and picture precedes the heading
+  if (heading && picture && (heading.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+    const section = document.createElement('div');
+    section.append(buildBlock('hero', { elems: [picture, heading] }));
+    main.prepend(section);
+  }
 }
 
 /**
