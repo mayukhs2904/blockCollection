@@ -4,7 +4,14 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
  * Recreate a table
  * https://www.hlx.live/developer/block-collection/table
  */
-  
+
+  function buildCell(rowIndex) {
+    console.log("hello")
+    const cell = rowIndex ? document.createElement('td') : document.createElement('th');
+    if (!rowIndex) cell.setAttribute('scope', 'col');
+    return cell;
+  }
+
   export default async function decorate(block) {
     const table = document.createElement('table');
     const thead = document.createElement('thead');
@@ -12,7 +19,8 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
     const header = !block.classList.contains('no-header');
     [...block.children].forEach((row, i) => {
       const tr = document.createElement('tr');
-      moveInstrumentation(row, tr);
+      // moveInstrumentation(row, tr);
+      buildCell(row);
   
       [...row.children].forEach((cell) => {
         const td = document.createElement(i === 0 && header ? 'th' : 'td');
